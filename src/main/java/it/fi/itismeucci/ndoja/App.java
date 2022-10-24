@@ -4,7 +4,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Date;
 
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
+//import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 public class App {
     public static void main(String[] args) {
@@ -18,9 +19,10 @@ public class App {
         lista.add(riccardo);
 
         Classe classe = new Classe("5", "inf", "laggiù", lista);
-        XmlMapper xmlMapper = new XmlMapper();
+        
         try {
-            xmlMapper.writeValue(new File("classe.xml"),classe);
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writeValue(new File("classe.json"), classe);
         } catch (Exception e) {}
     }
 }

@@ -1,0 +1,22 @@
+{
+    "numero": "5",
+    "sezione": "inf",
+    "aula": "laggiù",
+    "listaAlunni": [
+        {
+            "nome": "niccolo",
+            "cognome": "sartorio",
+            "nascita": 61054725600000
+        },
+        {
+            "nome": "flavio",
+            "cognome": "ndoja",
+            "nascita": 61065270000000
+        },
+        {
+            "nome": "riccardo",
+            "cognome": "fantacci",
+            "nascita": 61051874400000
+        }
+    ]
+}

@@ -2,15 +2,16 @@ package it.fi.itismeucci.ndoja;
 
 import java.io.File;
 
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
+//import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 public class App2 {
 
     public static void main( String[] args )
     {
-    XmlMapper xmlMapper = new XmlMapper();
+        ObjectMapper objectMapper = new ObjectMapper();
     try {
-    Classe classe = xmlMapper.readValue(new File("classe.xml"), Classe.class);
+    Classe classe = objectMapper.readValue(new File("classe.json"), Classe.class);
     System.out.println(classe.getAula());
     } catch (Exception e) {}
     }
